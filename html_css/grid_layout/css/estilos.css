@@ -1,0 +1,43 @@
+*{
+    margin:0px;
+    padding: 0px;
+}
+
+#container{
+    display: grid;
+    grid-template-areas: "cabecalho" "galeria";
+}
+
+#cabecalho {
+    grid-area: cabecalho;
+    background-color: black;
+    display: grid;
+    grid-template-areas: "logo opcoes";
+    justify-content: space-between;
+    padding: 15px;
+}
+
+#galeria {
+    grid-area: galeria;
+}
+
+#logo{
+    grid-area: logo;
+}
+
+#opcoes{
+    grid-area: opcoes;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+#logo a {
+    padding-right:10px;
+}
+
+#opcoes a {
+    padding-left: 10px;
+}

@@ -20,5 +20,7 @@ public class ComoLerDados {
         System.out.println("Informe uma palavra");
         c = ler.next();
         System.out.println(c);
+
+        ler.close();
     }
 }

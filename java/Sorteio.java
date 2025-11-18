@@ -1,0 +1,13 @@
+import java.util.Random;
+
+public class Sorteio {
+    public static void main(String[] args) {
+        // Criando uma instância da classe Random
+        Random random = new Random();
+
+        // Gerando um número inteiro aleatório entre 0 e 9
+        int numeroAleatorio = random.nextInt(10);
+
+        System.out.println("Número aleatório entre 0 e 9: " + numeroAleatorio);
+    }
+}

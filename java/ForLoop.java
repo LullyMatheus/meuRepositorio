@@ -1,0 +1,10 @@
+public class ForLoop {
+    public static void main(String[] args) throws Exception {
+        for (int x = 0; x <= 150; x++) {
+            System.out.println(x);
+/**for (inicialização da variável; checagem de condição; incremento/decremento do valor da variável) {  
+    comando a ser executado/declaração
+} */
+            }
+    }
+}

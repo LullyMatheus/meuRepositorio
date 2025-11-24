@@ -8,6 +8,7 @@ b=1;
 c=3;
 
 function minhaFuncao(){
+    //isso eh um comentario
 
 }
 

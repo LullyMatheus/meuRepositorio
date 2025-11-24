@@ -1,0 +1,13 @@
+body{
+    margin: 0;
+}
+.topo{
+    background-color: bisque;
+    padding: 10px;
+    text-align: center;
+}
+
+.p1{
+    float: left;
+    width: 50%;
+}

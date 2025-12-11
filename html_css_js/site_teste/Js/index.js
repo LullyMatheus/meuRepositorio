@@ -16,3 +16,4 @@ var d=1;
 var e=2;
 var f=d+e;
 console.log(f);
+var e=3; //no var eu posso atribiur novos valores, no let nao

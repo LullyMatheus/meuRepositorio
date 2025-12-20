@@ -1,0 +1,213 @@
+.data
+
+array_raios:        .space 200
+array_tiros:        .space 200
+
+msg_saudacao: .asciiz "---------Tiro ao Alvo---------\n" 
+br: .asciiz " \n"
+Instrucao1:  .asciiz "Digite o valor C, que significa a quantidade de circulos\n"
+Instrucao2:  .asciiz "Digite o valor T, que significa a quantidade de tiros\n"
+Instrucao3:  .asciiz "Digite o valor dos raios em ordem crescente\n"
+Instrucao4:  .asciiz "Digite agora as coordenadas dos tiros. \nDigite o valor de cada coordenada separadamente\n"
+
+
+teste: .asciiz "\nO valor escolhido foi: "
+teste1: .asciiz "\nConseguimos ler todos os raios!\n"
+teste2: .asciiz "\nConseguimos ler todas as coordenadas!\n"
+
+resultadoText: .asciiz "\nSua pontuação foi:\n"
+
+finalizar: .asciiz "\n\nFim de jogo\n\n"
+
+.text
+.globl main
+
+main:
+
+	li $v0, 4
+	la $a0, msg_saudacao
+	syscall
+
+	li $v0, 4
+	la $a0, br #apenas para quebrar uma linha
+	syscall
+
+	#Valor de C
+	li $v0, 4
+	la $a0, Instrucao1
+	syscall
+
+	li $v0, 5 #Syscall para ler um int
+	syscall
+	move $t0, $v0
+
+	#Imprime texto para verificar valor escolhido
+	li $v0, 4
+	la $a0, teste
+	syscall
+
+	#Syscall para imprimir um int
+	move $a0, $t0
+	li $v0, 1 
+	syscall
+	
+	move $s0, $a0 #O valor C fica armazenado em $s0
+
+	li $v0, 4
+	la $a0, br #apenas para quebrar uma linha
+	syscall
+
+	#Valor de T
+	li $v0, 4
+	la $a0, Instrucao2 
+	syscall
+
+	li $v0, 5 #Syscall para ler um int
+	syscall
+	move $t0, $v0
+
+	#Imprime texto para verificar valor escolhido
+	li $v0, 4
+	la $a0, teste
+	syscall
+
+	#Syscall para imprimir um int
+	move $a0, $t0
+	li $v0, 1 
+	syscall
+	
+	move $s1, $a0 #O valor T fica armazenado em $s1
+	
+	li $v0, 4
+	la $a0, br #apenas para quebrar uma linha
+	syscall
+	
+	#Preparar para iniciar o loop dos raios
+	li $v0, 4
+	la $a0, Instrucao3 
+	syscall
+		
+	la $t1, array_raios #endereço do vetor está em $t1
+	li $t0, 0 #Usarei $t0 como contador
+	
+ler_raios:
+
+	beq $t0, $s0, fim_ler_raios
+	
+	li $v0, 5 #Syscall para ler um int
+	syscall
+	sw $v0, 0($t1)
+	addi $t1, $t1, 4
+	
+	addi $t0, $t0, 1	
+	j ler_raios
+	
+fim_ler_raios: 
+
+	li $v0, 4
+	la $a0, teste1
+	syscall
+	
+	#Preparar para ler tiros
+	li $v0, 4
+	la $a0, Instrucao4 
+	syscall
+	
+	la $t2, array_tiros
+	li $t0, 0 #Usarei $t0 como contador novamente
+	
+ler_tiros:
+
+	beq $t0, $s1, fim_ler_tiros 
+	
+	li $v0, 5 #Syscall para ler um int
+	syscall
+	sw $v0, 0($t2)
+	addi $t2, $t2, 4
+	li $v0, 5 #Syscall para ler um int
+	syscall
+	sw $v0, 0($t2)
+	addi $t2, $t2, 4
+	
+	addi $t0, $t0, 1	
+	j ler_tiros
+
+fim_ler_tiros:
+
+	li $v0, 4
+	la $a0, br #apenas para quebrar uma linha
+	syscall
+	
+	li $v0, 4
+	la $a0, teste2 #confirma que ler tiros deu certo
+	syscall
+	
+	# Preparar para o loop principal de cálculo
+	li $t0, 0 #Usarei $t0 como contador novamente
+	la $t2, array_tiros #resetando o ponteiro do vetor de tiros
+	li $t7, 0 # Zerar a pontuação total
+	
+fazendo_contas:
+	
+	beq $t0, $s1, resultado
+	
+	la $t1, array_raios
+	li $s6, 0
+	move $t6, $s0
+	
+	lw $t3, 0($t2) #carrega em $t3 a primeira coordenada do tiro
+	lw $t4, 4($t2) #carrega em $t4 a segunda coordenada do tiro
+	
+	mult $t3, $t3
+	mflo $t3
+	
+	mult $t4, $t4
+	mflo $t4
+	
+	add $t5, $t3, $t4 #$t5 é a soma dos quadrados das coordenadas
+	
+para_cada_raio:
+	.
+	beq $s6, $s0, proximo_tiro
+	
+	lw $t4, 0($t1)
+	mult $t4, $t4
+	mflo $t4 #$t4 é o quadrado do raio
+	
+	bgt $t5, $t4, nao_acertou
+	
+	j pontuar 
+		
+nao_acertou:
+	addi $t1, $t1, 4
+	addi $s6, $s6, 1 #meu contador
+	subi $t6, $t6, 1 #reduz pontuação
+	j para_cada_raio
+		
+pontuar:
+	add $t7, $t7, $t6 #somando a pontuação
+	j proximo_tiro
+	
+proximo_tiro: 
+	addi $t0, $t0, 1 
+	addi $t2, $t2, 8 
+	j fazendo_contas 
+
+resultado:
+
+	li $v0, 4
+	la $a0, resultadoText
+	syscall
+	
+	#Syscall para imprimir um int
+	move $a0, $t7 #a pontuação deve estar em $t7
+	li $v0, 1 
+	syscall
+	
+encerrar:
+	#Finaliza o programa
+	li $v0, 4
+	la $a0, finalizar
+	syscall
+	li $v0, 10 
+	syscall

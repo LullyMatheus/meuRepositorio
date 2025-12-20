@@ -1,4 +1,6 @@
-public class estudoSobreVetores {
+import java.util.ArrayList;
+
+public class Vetores {
     public static void main(String[] args) {
         // Criando um vetor de inteiros com tamanho 5
         int[] vetor = new int[5];
@@ -23,5 +25,11 @@ public class estudoSobreVetores {
             soma += vetor[i];
         }
         System.out.println("Soma de todos os elementos do vetor: " + soma);
+
+        ArrayList<String> cars = new ArrayList<>();
+        cars.add("Volvo");
+        cars.add("BMW");
+        String firstCar = cars.get(0); // Retrieves "Volvo"
     }
+
 }

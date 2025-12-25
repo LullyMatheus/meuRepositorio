@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+    <h1 style="font-family: Arial, Helvetica, sans-serif;">Oi, bem vindo!</h1>
+
+
+    <script>
+
+        var numero1 = window.prompt('Digite um número:');
+        var numero2 = window.prompt('Agora, digite outro número:');
+        var int1 = Number.parseInt(numero1);
+        var int2 = Number.parseInt(numero2);
+        var soma = int1+int2;
+        window.alert(`A soma dos dois numeros é ${soma}`); //usando template String
+        /*
+        O window prompt sempre retorna uma String
+        para receber um numero, precisamos converter de String para int
+        para isso, usamos:
+        Number.parseInt(numero)
+        Number.parseFloat(numero)
+        Number(numero)
+            Nesse ultimo caso o Js identifica sozinho que tipo de numero esta na variavel
+        */
+
+        /*
+        Tambem eh possivel converter int para String
+        para isso, usamos:
+        String(numero)
+        numero.toString()
+        */
+
+        /*
+        Formatar String
+        Usando Template String
+        var s = 'Javascript'
+        `Eu estou aprendendo ${s}`
+        precisa estar entre crase
+        */
+
+        /*
+        Metodos de String
+        s.length
+        s.toUpperCase()
+        s.toLowerCase()
+        */
+
+        /*
+        E possivel usar <br/> para quebrar linhas em Js
+
+        Abaixo, metodos de numeros
+        n1.toFixed(2) eh uma funcao para usar 2 casas decimais
+        n1.replace('.',',')
+
+        para exibir como moeda:
+        n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
+
+        */
+
+
+
+        
+
+    </script>
+</body>
+</html>

@@ -4,11 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body {
+            margin-top: 30px;
+            margin-left: 30px;
+            background-color: rgb(168, 134, 89);
+            font: normal 15pt Arial;
+            color: white;
+        }
+
+    </style>
 </head>
 <body>
+    <h1>Introdução ao DOM</h1>
+    <p>Irei aprender a usar o DOM</p>
+    <p>DOM significa Document Object Model</p>
+    <div id="msg">
+        <p>Eu sou uma mensagem</p>
+    </div>
+    
 
-
+    <footer>O que esta escrito abaixo veio do javascript:</footer>
+    <br>
     <script>
+        //comando para escrever na tela
+        //window.document.writeln('Olá mundo');
+        //window.document.writeln('Pular linha');
+        //window.document.writeln(window.navigator.appName);
+        var p1 = window.document.getElementsByTagName('p')[0];
+        document.writeln('O primeiro paragrafo diz: '+p1.innerText);
+        p1.style.color='yellow';
+        var corpo = window.document.body;
+        corpo.style.backgroundColor='black';
+
+        var msd = window.document.getElementById('msg');
+        //msg.style.color='red';
+
+        var d = window.document.querySelector('div#msg'); //id eh representado por # e class eh representada por um '.'
+        d.style.backgroundColor='white';
+        d.style.color='red';
 
         
     </script>

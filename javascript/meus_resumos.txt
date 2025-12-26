@@ -39,3 +39,10 @@ d.style.color='red';
 
 //Aula 10 - Eventos DOM
 //Anotacoes da aula abaixo (talvez ocultas no notepad++)
+/*
+A aula 10 mostra como criar funcoes, eventlistener, 
+e coisas como onclick="", onmouseenter=""
+Isso tudo eh bem importante
+
+Ideia de projetinho: crie uma calculadora no javascript
+*/

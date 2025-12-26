@@ -5,8 +5,31 @@ Meus resumos do curso de Javascript do Curso em Video
 //Aula 09 - Introducao ao DOM
 
 /*
+O que eh DOM?
+Document Object Model
+Trata-se de um conjunto de objetos dentro do navegador
+que vai te dar acesso aos componentes internos do seu site
+Ele nao funciona no node.js, apenas no navegador
 
+Para entender melhor, vamos criar a arvore DOM de um site:
 
+Ela comeca na raiz. Dentro de um site a raiz se chama window
+
+Raiz: window
+
+Seria literalmente a janela do navegador
+Tudo no Javascript esta dentro desse objeto
+
+window possui varios filhos, como location, document e history
+
+Dentro de document, existe o filho html
+
+html possui dois filhos, o head e o body
+
+head possui filhos como meta e title
+body possui como filho diversas tags, como h1, a, div
+
+Entao, para chegar em h1, fariamos o caminho window -> document -> html -> body -> h1
 
 
 */

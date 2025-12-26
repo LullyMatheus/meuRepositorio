@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #area{
+            font: bold 20pt Arial;
+            color: white;
+            background-color: green;
+            height: 200px;
+            width: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+
+        #outraArea{
+            font: bold 20pt Arial;
+            color: white;
+            background-color: rgb(194, 138, 65);
+            height: 200px;
+            width: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="area" onclick="clicar()" onmouseenter="entrou()" onmouseout="saiu()">
+        Interaja...
+    </div>
+
+    <br>
+
+    <div id="outraArea">
+        Interaja...
+    </div>
+
+   
+    <script>
+
+        var b = window.document.getElementById('outraArea');
+        b.addEventListener('click',clicarEmB);
+        b.addEventListener('mouseout',saiuB);
+
+        var a = window.document.getElementById('area');
+
+        function clicar(){
+            a.style.backgroundColor='red';
+        }
+
+        function clicarEmB(){
+            b.style.backgroundColor='red';
+        }
+
+        function entrou(){
+            a.innerText='Entrou!';
+        }
+
+        function saiu(){
+            a.innerText='Saiu!'
+            a.style.backgroundColor='green';
+        }
+
+        function saiuB(){
+            b.innerText='Saiu!'
+            b.style.backgroundColor= 'rgb(194, 138, 65)';
+        }
+
+
+    </script>
+    
+</body>
+</html>

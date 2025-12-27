@@ -29,8 +29,8 @@
             background-color: white;
             border-radius: 20px;
             text-align: center;
-            font: bold 15pt Unageo;
-            padding: 10%; /* usar o padding aqui eh melhor do que heigth e width*/
+            font: bold 20pt Unageo;
+            padding: 3%; /* usar o padding aqui eh melhor do que heigth e width*/
             box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.345);
 
         }
@@ -68,11 +68,11 @@
             var msg = window.document.getElementById('msg');
             msg.innerText=`Agora são ${hora}`
             if(hora>0 && hora<12){
-                imagem.src='dia.jpg'
+                imagem.src='dia.png'
             } else if(hora<=18){
-                imagem.src='tarde.jpg'
+                imagem.src='tarde.png'
             } else{
-                imagem.src='noite.jpg'
+                imagem.src='noite.png'
             }
         }
         

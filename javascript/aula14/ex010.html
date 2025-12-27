@@ -5,12 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu Site</title>
     <style>
-        body{
-            background-color: rgb(0, 190, 233);
-        }
 
         .header{
-            font: bold 25pt Arial;
+            font: bold 20pt Arial;
             text-align: center;
             color: white;
             margin-top: 40px;
@@ -27,10 +24,11 @@
 
         .minhaDiv{
             background-color: white;
+            width: 300px;
             border-radius: 20px;
             text-align: center;
             font: bold 20pt Unageo;
-            padding: 3%; /* usar o padding aqui eh melhor do que heigth e width*/
+            padding: 2%; /* usar o padding aqui eh melhor do que heigth e width*/
             box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.345);
 
         }
@@ -50,7 +48,7 @@
     <section class="section">
         <div class="minhaDiv">
             <p id="msg">---</p>
-            <br>
+
             <img id="imagem" src="">
 
         </div>
@@ -64,15 +62,18 @@
             var img = window.document.getElementById('imagem')
             var data = new Date();
             var hora = data.getHours();
-            //hora=20 // isso eh para fazer testes
+            //hora=14// isso eh para fazer testes
             var msg = window.document.getElementById('msg');
-            msg.innerText=`Agora são ${hora}`
+            msg.innerText=`Agora são ${hora} horas!`
             if(hora>0 && hora<12){
-                imagem.src='dia.png'
+                imagem.src='dia.png';
+                window.document.body.style.backgroundColor='rgb(0, 190, 233)'
             } else if(hora<=18){
                 imagem.src='tarde.png'
+                window.document.body.style.backgroundColor='rgb(184, 116, 33)'
             } else{
                 imagem.src='noite.png'
+                window.document.body.style.backgroundColor='rgb(1, 7, 66)'
             }
         }
         

@@ -79,6 +79,9 @@
 
     <script>
 
+        var img = window.document.createElement('img') //isso precisava ficar fora da funcao
+        img.setAttribute('id','imagem')
+
         function verificar(){
             var txtano = window.document.getElementById('txtano');
             anoNum = Number(txtano.value);
@@ -87,22 +90,18 @@
             var idade = anoAtual-anoNum;
             var sex = window.document.getElementsByName('radsex')
 
+            
             if(anoNum==0){
                 window.alert('Preecha o campo informando sua idade!')
             } else if(sex[0].checked){ //nao esquecer a forma correta de verificar qual opcao esta selecionada
                 res.innerHTML = `Você é um homem com ${idade} anos de idade!🎉`;
-                var img = window.document.createElement('img')
                 img.setAttribute('src','snoopy.png')
             } else if (sex[1].checked){
                 res.innerHTML = `Você é uma mulher com ${idade} anos de idade!🎉`;
-                var img = window.document.createElement('img')
-                img.setAttribute('id','imagem')
                 img.setAttribute('src','snoopy.png')
             } else {
                 res.innerHTML = `Você é uma pessoa com ${idade} anos de idade!🎉`;
-                var img = window.document.createElement('img')
-                img.setAttribute('id','imagem')
-                img.src='snoopy'
+                img.setAttribute('src','snoopy.png')
             }
             
             //window.alert(`Você tem ${idade} anos de idade!`)

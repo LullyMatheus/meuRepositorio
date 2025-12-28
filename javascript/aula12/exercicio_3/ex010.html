@@ -67,7 +67,8 @@
             <br>
             <hr>
             <p><small>Digite os dados para verificar o resultado!</small></p>
-            <p id="res">---</p>
+            <p id="res">😴Aguardando usuário...</p>
+            <div id="img"></div>
 
         </div>
     </section>
@@ -90,15 +91,24 @@
                 window.alert('Preecha o campo informando sua idade!')
             } else if(sex[0].checked){ //nao esquecer a forma correta de verificar qual opcao esta selecionada
                 res.innerHTML = `Você é um homem com ${idade} anos de idade!🎉`;
+                var img = window.document.createElement('img')
+                img.setAttribute('src','snoopy.png')
             } else if (sex[1].checked){
                 res.innerHTML = `Você é uma mulher com ${idade} anos de idade!🎉`;
+                var img = window.document.createElement('img')
+                img.setAttribute('id','imagem')
+                img.setAttribute('src','snoopy.png')
             } else {
                 res.innerHTML = `Você é uma pessoa com ${idade} anos de idade!🎉`;
+                var img = window.document.createElement('img')
+                img.setAttribute('id','imagem')
+                img.src='snoopy'
             }
-
             
             //window.alert(`Você tem ${idade} anos de idade!`)
-            //res = window.document.getElementById('res')
+            imagem = window.document.getElementById('img')
+
+            imagem.appendChild(img)
             //res.innerHTML = `Você tem ${idade} anos de idade!🎉`
         }
 

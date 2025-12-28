@@ -46,3 +46,9 @@ Isso tudo eh bem importante
 
 Ideia de projetinho: crie uma calculadora no javascript
 */
+
+//Aula sobre DEBBUG
+/*
+No VSCode ir em run> start debugging > adicionar breakpoint >
+adicionar variaveis para monitorar na aba 'watch' > F10 ou move forward para avancar
+*/

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Site</title>
+    <style>
+        body{
+            background-color: rgb(57, 15, 84);
+        }
+
+        .header{
+            font: bold 15pt Unageo;
+            text-align: center;
+            color: white;
+            margin-top: 40px;
+        }
+
+        .section{
+            margin-top: 30px;
+            display: flex; 
+            justify-content: center; 
+            align-items: center;
+            
+            
+        }
+
+        .minhaDiv{
+            background-color: white;
+            border-radius: 20px;
+            text-align: left;
+            font: normal 15pt Unageo;
+            padding: 3%; /* usar o padding aqui eh melhor do que heigth e width*/
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.345);
+
+        }
+
+        .footer{
+            font: normal 10pt Unageo;
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <h1>Você sabe a tabuada?</h1>
+    </header>
+    <section class="section">
+        <div class="minhaDiv">
+            <label for="number">Escolha um número</label>
+            <input type="number" id="number">
+            <br>
+            <input type="button" value="Gerar" onclick="gerar()">
+            <p id="aguarde">🤓Aguardando entrada...</p>
+            <p id="res"></p>
+            <p id="dica"></p>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy;matheusmechetti</p>
+    </footer>
+
+    <script>
+
+        
+
+        function gerar(){
+            var txt = window.document.createElement('txt');
+            var numUser = window.document.getElementById('number');
+            var numero = Number(numUser.value);
+            var dica = window.document.getElementById('dica');
+            dica.innerHTML='<small>💡Dica: você pode tentar com outro número, quantas vezes quiser!</small>'
+            
+            var aguarde = window.document.getElementById('aguarde');
+            aguarde.innerText='Aqui está a resposta:'
+            var res = window.document.getElementById('res');
+            res.innerText='';
+            
+            for(var i=0;i<=10;i++){
+                var produto = i*numero;
+                res.innerHTML+=`${i}*${numero}=${produto}<br>`
+                
+            }
+
+
+        }
+    </script>
+    
+</body>
+</html>

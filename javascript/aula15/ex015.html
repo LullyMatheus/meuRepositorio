@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Site</title>
+    <style>
+        body{
+            background-color: rgb(110, 161, 0);
+        }
+
+        .header{
+            font: bold 15pt Unageo;
+            text-align: center;
+            color: white;
+            margin-top: 40px;
+        }
+
+        .section{
+            margin-top: 30px;
+            display: flex; 
+            justify-content: center; 
+            align-items: center;
+            
+            
+        }
+
+        .minhaDiv{
+            background-color: white;
+            border-radius: 20px;
+            text-align: center;
+            font: normal 15pt Unageo;
+            padding: 3%; /* usar o padding aqui eh melhor do que heigth e width*/
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.345);
+
+        }
+
+        .footer{
+            font: normal 10pt Unageo;
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <h1>Analisador de Números</h1>
+    </header>
+    <section class="section">
+        <div class="minhaDiv">
+            <label for="numero"><strong>Adicionar número:</strong></label>
+            <input id="numero" type="number" required>
+            <input type="button" value="adicionar" onclick="adicionar()">
+            <input type="button" value="finalizar" onclick="finalizar()">
+            <section>
+                <p id="aguardando">&#8986 <strong>Aguardando...</strong></p> <!--Adicionar &#x na frente do codigo-->
+                <p id="res"></p>
+            </section>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy;matheusmechetti</p>
+    </footer>
+
+    <script>
+
+        let vetor = [];
+       
+        function adicionar(numUser){
+            var aguardando = window.document.getElementById('aguardando');
+            aguardando.innerHTML=`` 
+            numUser=window.document.getElementById('numero');
+            numero = Number(numUser.value);
+            //window.alert(`Você tentou adicionar o número ${numero}`)
+            vetor.push(numero);
+            var res = window.document.getElementById('res');
+            res.innerHTML+=`<br>Você adicionou o número ${numero}` 
+        }
+
+        function finalizar(){
+            var res = window.document.getElementById('res');
+            res.innerHTML=`` 
+            var aguardando = window.document.getElementById('aguardando');
+            aguardando.innerHTML=`Finalizado &#x2705` 
+            window.alert(`O seu vetor é ${vetor}`)
+        }
+
+    </script>
+    
+</body>
+</html>

@@ -52,3 +52,6 @@ Ideia de projetinho: crie uma calculadora no javascript
 No VSCode ir em run> start debugging > adicionar breakpoint >
 adicionar variaveis para monitorar na aba 'watch' > F10 ou move forward para avancar
 */
+
+//Conselho geral de programacao: faca o codigo de pouco a pouco
+// nao programe de uma vez so e deixe para testar tudo no final

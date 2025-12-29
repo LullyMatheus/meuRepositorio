@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Site</title>
+    <style>
+        body{
+            background-color: rgb(57, 15, 84);
+        }
+
+        .header{
+            font: bold 15pt Unageo;
+            text-align: center;
+            color: white;
+            margin-top: 40px;
+        }
+
+        .section{
+            margin-top: 30px;
+            display: flex; 
+            justify-content: center; 
+            align-items: center;
+            
+            
+        }
+
+        .minhaDiv{
+            background-color: white;
+            border-radius: 20px;
+            text-align: left;
+            font: normal 15pt Unageo;
+            padding: 3%; /* usar o padding aqui eh melhor do que heigth e width*/
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.345);
+
+        }
+
+        .footer{
+            font: normal 10pt Unageo;
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <h1>Vamos criar sequências!</h1>
+    </header>
+    <section class="section">
+        <div class="minhaDiv">
+            <label for="number">Vamos contar até que número?</label>
+            <input type="number" id="number" placeholder="Digite um número">
+            <br>
+            <label for="passo">Passo:</label>
+            <input type="number" id="passo" placeholder="Digite um passo">
+            <br>
+            <input type="button" value="Gerar Sequencia" onclick="gerar()">
+            <p id="aguarde">🤓Aguardando entrada...</p>
+            <p id="res"></p>
+            <p id="dica"></p>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy;matheusmechetti</p>
+    </footer>
+
+    <script>
+
+        
+
+        function gerar(){
+            var txt = window.document.createElement('txt');
+            var numUser = window.document.getElementById('number');
+            var numero = Number(numUser.value);
+
+            var passoUser = window.document.getElementById('passo')
+            var passo = Number(passoUser.value)
+
+            var aguarde = window.document.getElementById('aguarde');
+            aguarde.innerText='Aqui está a resposta:'
+            var res = window.document.getElementById('res');
+            res.innerText='';
+            var c = 0;
+            
+            for(var i=0;i<=numero;i=i+passo){
+                c++;
+                res.innerHTML+=`${i}`
+                if(i+passo>numero){
+                    res.innerHTML+='.'
+                } else{
+                    res.innerHTML+=', '
+                }
+                if(c%10==0){
+                    res.innerHTML+='<br>'
+                }
+                
+            }
+
+
+        }
+    </script>
+    
+</body>
+</html>

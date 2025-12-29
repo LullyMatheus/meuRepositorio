@@ -77,7 +77,9 @@
             //window.alert(`Você tentou adicionar o número ${numero}`)
             vetor.push(numero);
             var res = window.document.getElementById('res');
-            res.innerHTML+=`<br>Você adicionou o número ${numero}` 
+            res.innerHTML+=`<br>Você adicionou o número ${numero}`
+            numUser.value=''
+            numUser.focus();
         }
 
         function finalizar(){
@@ -85,7 +87,43 @@
             res.innerHTML=`` 
             var aguardando = window.document.getElementById('aguardando');
             aguardando.innerHTML=`Finalizado &#x2705` 
-            window.alert(`O seu vetor é ${vetor}`)
+            res.innerHTML+=`Seu vetor é [${vetor}]`
+            res.innerHTML+=`<br>Ele possui ${vetor.length} elementos!`
+            var maior = encontraMaior(vetor);
+            var menor = encontraMenor(vetor);
+            var soma = somar(vetor);
+            res.innerHTML+=`<br>O <strong>maior</strong> valor que existe nesse vetor é ${maior}`
+            res.innerHTML+=`<br>O <strong>menor</strong> valor que existe nesse vetor é ${menor}`
+            res.innerHTML+=`<br>A <strong>soma</strong> dos valores é igual a ${soma}`
+
+        }
+
+        function encontraMaior(vetor){
+            var maior=vetor[0];
+            for(var i=1;i<vetor.length;i++){
+                if(vetor[i]>maior){
+                    maior = vetor[i];
+                }
+            }
+            return maior;            
+        }
+
+        function encontraMenor(vetor){
+            var menor=vetor[0];
+            for(var i=1;i<vetor.length;i++){
+                if(vetor[i]<menor){
+                    menor = vetor[i];
+                }
+            }
+            return menor;            
+        }
+
+        function somar(vetor){
+            var soma=0;
+            for(var i=0;i<vetor.length;i++){
+                soma+=vetor[i];
+            }
+            return soma;
         }
 
     </script>

@@ -1,0 +1,11 @@
+/*
+Curso de Git e GitHub
+*/
+
+/*
+Aula 1
+O git nao foi o primeiro software de controle de versoes. Na verdade existiram muitos
+antes dele. Alguns dependiam de repositorios centralizados, mas os mais modernos
+(como o git) trabalham com repositorios distribuidos. Alem do git, uma outra 
+tecnologia interessante de controle de versoes se chama BitKeeper.
+*/

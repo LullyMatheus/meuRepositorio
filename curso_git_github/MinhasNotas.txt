@@ -9,3 +9,8 @@ antes dele. Alguns dependiam de repositorios centralizados, mas os mais modernos
 (como o git) trabalham com repositorios distribuidos. Alem do git, uma outra 
 tecnologia interessante de controle de versoes se chama BitKeeper.
 */
+
+/*
+Aula 2
+Opções que existem além do GitHub: GitLab, BitBucket, Phabricator, Gogs, Kallithea
+*/

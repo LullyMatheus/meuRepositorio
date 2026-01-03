@@ -13,4 +13,5 @@ tecnologia interessante de controle de versoes se chama BitKeeper.
 /*
 Aula 2
 Opções que existem além do GitHub: GitLab, BitBucket, Phabricator, Gogs, Kallithea
+O Git foi criado pelo Linus Torvalds, que liderou o projeto Linux
 */

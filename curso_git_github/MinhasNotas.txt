@@ -15,3 +15,11 @@ Aula 2
 Opções que existem além do GitHub: GitLab, BitBucket, Phabricator, Gogs, Kallithea
 O Git foi criado pelo Linus Torvalds, que liderou o projeto Linux
 */
+
+/*
+Aula 3
+VCS: Version Control Software
+SCM: Source Code Management
+
+O Git é um VCS
+*/

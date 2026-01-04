@@ -17,9 +17,19 @@ O Git foi criado pelo Linus Torvalds, que liderou o projeto Linux
 */
 
 /*
-Aula 3
+Aula 4
 VCS: Version Control Software
 SCM: Source Code Management
 
 O Git é um VCS
+*/
+
+/*
+Aula 5
+Sempre crie os repositorios com um arquivo README, ele é importante para para GitHub
+License: MIT License é bom para repositórios públicos. Ler os detalhes depois.
+Ao criar um novo arquivo no VSCode, é comum aparecer a letra 'U' na frente. 
+Isso significa 'Untracked'. Ou seja, o git ainda não registra as versões desse arquivo
+até você fazer o primeiro commit. 
+Depois do primeiro commit, começa a aparecer 'M', de Modified, quando você altera um arquivo.
 */

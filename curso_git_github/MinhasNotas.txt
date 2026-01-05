@@ -33,3 +33,18 @@ Isso significa 'Untracked'. Ou seja, o git ainda não registra as versões desse
 até você fazer o primeiro commit. 
 Depois do primeiro commit, começa a aparecer 'M', de Modified, quando você altera um arquivo.
 */
+
+/*
+Aula 8
+Arquivo gitignore: utilizado para que o git não monitore determinado arquivo.
+No github desktop, antes de fazer um commit, você pode clicar com botão direito em 
+um arquivo e vai aparecer a opção de "ignorar" (criar gitignore). Ignorar significa
+que o git não vai versionar esse arquivo e nem mandá-lo para o github.
+
+- Existe uma diferença entre clone e fork. Quando você clona um repositório, ele 
+vai aparecer na sua máquina como um repositório local, mas você não vai fazer commits e 
+pushs para o repositório remoto. Se quiser fazer isso, você cria um fork. Nesse caso, 
+cria-se um repositório remoto para você fazer as suas próprias modificações no código base.
+
+- Issues são uma forma de se comunicar com outros programadores no GitHub
+*/

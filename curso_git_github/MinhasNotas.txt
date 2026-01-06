@@ -48,3 +48,17 @@ cria-se um repositório remoto para você fazer as suas próprias modificações
 
 - Issues são uma forma de se comunicar com outros programadores no GitHub
 */
+
+/*
+Aula 9
+Como usar issues?
+Situação exemplo: você encontrou um problema no vscode.
+O vscode está disponivel no github, então você pode criar uma issue falando do seu problema
+por lá. Assim, você deverá receber algum retorno dos desenvolvedores.
+Caso você queira tentar resolver o problema, você cria um fork do projeto, cria uma brench
+só para resolver esse problema, e se conseguir você faz um pull request, para que os 
+desenvolvedores avaliem se sua solução pode ser implementada no projeto oficial.
+
+Ao encontrar o problema em um projeto, primeiro verifique se já existe uma issue resolvida 
+com o seu problema. Caso não exista, crie uma nova issue.
+*/

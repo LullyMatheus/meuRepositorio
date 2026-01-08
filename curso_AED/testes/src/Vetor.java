@@ -8,16 +8,6 @@ public class Vetor {
         this.tamanhoReal=0;
     }
 
-    // public void adiciona(String elemento){
-    //     //encontrar uma posicao nula (disponivel para uso)
-    //     for (int i=0;i<this.elementos.length;i++){
-    //         if(this.elementos[i]==null){
-    //             this.elementos[i]=elemento;
-    //             break;
-    //         }
-    //     }
-    // }
-
     public void adiciona(String elemento) throws Exception{
 
         aumentaCapacidade();
@@ -74,6 +64,12 @@ public class Vetor {
 
     public void adiciona(String elemento, int posicao){
 
+        /*
+        Seria interessante verificar 
+        se eu realmente estou tentando 
+        adicionar em uma posicao ocupada 
+        */
+
         if(!(posicao>=0 && posicao<this.tamanhoReal)){
             throw new IllegalArgumentException("Posição inválida!");
         }
@@ -94,4 +90,17 @@ public class Vetor {
             this.elementos=elementosNovos;
         }
     }
+
+    public void remover(int posicao){
+        if(posicao<0 || posicao>this.tamanhoReal){
+            System.out.println("Posição inválida ou já está vazia!");
+            return;
+        } else {
+            for(int i=posicao;i<this.tamanhoReal-1;i++){
+                this.elementos[i]=this.elementos[i+1];
+            }
+            this.tamanhoReal--;
+        }
+    }
+
 }

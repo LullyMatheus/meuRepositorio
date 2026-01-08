@@ -34,5 +34,11 @@ public class App {
 
         System.out.println(vetor.toString());
 
+        System.out.println("Remover primeiro elemento!");
+
+        vetor.remover(0);
+
+        System.out.println(vetor.toString());
+
     }
 }

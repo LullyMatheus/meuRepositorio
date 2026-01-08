@@ -14,7 +14,7 @@ public class App {
 
         System.out.println("O tamanho real do vetor é: "+tamanho);
 
-        System.out.println(vetor.busca(1));
+        System.out.println(vetor.existe("Elemento 4"));
 
     }
 }

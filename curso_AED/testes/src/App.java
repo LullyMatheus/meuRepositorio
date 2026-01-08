@@ -1,11 +1,11 @@
 public class App {
     public static void main(String[] args) throws Exception {
-       Vetor vetor = new Vetor(10);
+       Vetor vetor = new Vetor(5);
 
         try {
-            vetor.adiciona("Elemento 1");
-            vetor.adiciona("Elemento 2");
-            vetor.adiciona("Elemento 3");
+            vetor.adiciona("B");
+            vetor.adiciona("C");
+            vetor.adiciona("D");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -14,7 +14,11 @@ public class App {
 
         System.out.println("O tamanho real do vetor é: "+tamanho);
 
-        System.out.println(vetor.existe("Elemento 4"));
+        System.out.println(vetor.toString());
+
+        vetor.adiciona("A",0);
+
+        System.out.println(vetor.toString());
 
     }
 }

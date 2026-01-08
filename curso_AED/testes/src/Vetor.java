@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class Vetor {
 
     private String[] elementos;
@@ -70,6 +68,19 @@ public class Vetor {
             }
         }
         return -1;
+    }
+
+    public void adiciona(String elemento, int posicao){
+
+        if(!(posicao>=0 && posicao<this.tamanhoReal)){
+            throw new IllegalArgumentException("Posição inválida!");
+        }
+
+        for(int i=this.tamanhoReal;i>posicao;i--){
+            this.elementos[i]=this.elementos[i-1];
+        }
+        this.elementos[posicao]=elemento;
+        this.tamanhoReal++;
     }
 
 }

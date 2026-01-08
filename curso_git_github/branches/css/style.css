@@ -1,0 +1,16 @@
+body{
+    background-color: brown;
+    font: normal 10pt Arial;
+}
+
+h1{
+    font: bold 25pt Arial;
+}
+
+main{
+    background-color: white;
+    width: 500px;
+    margin: auto;
+    padding: 1%;
+}
+

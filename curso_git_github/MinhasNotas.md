@@ -77,11 +77,11 @@ Guia da linguagem Markdown!
 
 - Deixar riscado: dois til's de cada lado (~~);
   
-  # Titulo (hashtag + espaço) Título de nível 1,
+  # Titulo (hashtag + espaço) Título nível 1,
   
-  ## Titulo (duas hashtags + espaço) Título de nível 2,
+  ## Titulo (duas hashtags + espaço) Título nível 2,
   
-  ### Titulo (três hashtags + espaço) Título de nível 3,
+  ### Titulo (três hashtags + espaço) Título nível 3,
 
 - Adicionar uma linha horizontal: três hífens --- ou três asteriscos ***;
 
@@ -103,8 +103,6 @@ Guia da linguagem Markdown!
 | --- | ------- | ---- |
 | 1   | Matheus | 10   |
 
----
-
 - Inserir comandos: use crases
 
 - Meu programa: use três crases
@@ -114,16 +112,18 @@ Guia da linguagem Markdown!
   btn.disabled = true;
   ```
 
-- Emojis: entre dois pontos ':' (dois pontos de cada lado)
-
-- :smile:
-
-- :hand_over_mouth:
-
-- :eyes:
-
-> Quote
+- Emojis: entre dois pontos ':' (dois pontos de cada lado) :smile: :hand_over_mouth:
 
 Como diz Gabrielle Coimbra:
 
 > Jesus Amado
+
+---
+
+## Aula 12
+
+Branches/ Ramificações
+
+Quando começamos no GitHub, é muito comum fazermos todos os commits na master (main). Mas isso não é uma boa prática! Pois dessa forma, é difícil evitar que alguns erros apareçam na main. O ideal é, para cada feature a ser desenvolvida, ou para cada problema a ser solucionado, criar uma branch. Quando o trabalho nessa branch for concluido, ele deve ser testado e validado. E após os testes, será feito um merge, para jogar o que foi desenvolvido para a main. 
+
+Se o seu pro

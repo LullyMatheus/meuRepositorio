@@ -20,6 +20,8 @@ public class Vetor {
 
     public void adiciona(String elemento) throws Exception{
 
+        aumentaCapacidade();
+
         if(this.tamanhoReal<this.elementos.length){
             this.elementos[this.tamanhoReal]=elemento;
             this.tamanhoReal++;
@@ -83,4 +85,13 @@ public class Vetor {
         this.tamanhoReal++;
     }
 
+    private void aumentaCapacidade(){
+        if(this.tamanhoReal==this.elementos.length){
+            String[] elementosNovos = new String[this.elementos.length*2];
+            for(int i=0;i<this.tamanhoReal;i++){
+                elementosNovos[i]=this.elementos[i];
+            }
+            this.elementos=elementosNovos;
+        }
+    }
 }

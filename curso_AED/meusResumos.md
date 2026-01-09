@@ -18,8 +18,6 @@ Uma estrutura de dados é utilizada para armazenar dados de modo que possam ser 
 
 Além disso, vamos aprender a identificar qual o tipo de estrutura é o mais adequado para cada caso.
 
-
-
 ### 1. Vetores (Arrays)
 
 Vetores são uma classe do Java
@@ -80,7 +78,7 @@ Adicionando o método para adicionar no final:
 
 ```java
 public void adiciona(String elemento){
-    
+
     /*
     obs: no java, vetor de String
     eh inicializado como null
@@ -107,15 +105,13 @@ public void adiciona(String elemento) throws Exception{
     } else{
         throw new Exception("O vetor já está cheio!");
     }
-        
+
 }
 ```
 
 Ao printar o seu vetor, você pode utilizar o método toString(), da classe Array do java. E você pode também fazer alguma manipulação interna nesse método para que o print saia como você quer. Porém, para manipular a saída, o método mais simples e intuitivo, que seria a concatenação de Strings, não é o mais eficiente.
 
 A melhor forma de alterar a força de saída do seu vetor é utilizando a classe StringBuilder, nativa do java.
-
-
 
 **Criando o método para verificar se um filme existe**
 
@@ -134,8 +130,6 @@ Grande observação: não usar '==' para comparar String em java. Usar o .equals
 ```
 
 Retornar a posição do elemento ou -1 é mais elegante do que retornar true ou false, segundo professora Loiane.
-
-
 
 **Como inserir dados em qualquer posição do vetor?**
 
@@ -210,4 +204,67 @@ O método acima é privado pois ele só é usado internamente pela classe, dentr
 
 Podemos também combinar esse método com o método busca, que retorna a posição de um elemento específico. Com essa informação, podemos remover um elemento específico, mesmo sem saber a posição dele.
 
+**Como generalizar o tipo de dado do vetor?**
 
+Uma forma de fazer isso é trocando o tipo atual do vetor por Object, já que Object é superclasse de todas as outras classes do java.
+
+OBS: na classe object, existe um método equals. A IDE pode gerar para você um método equals que compara todos os atributos de um objeto com outro para verificar se são iguais. É um método bem útil. 
+
+Objects te permite armazenar no mesmo vetor mais de um tipo de dado, como inteiros e Strings.
+
+Mas existe uma forma melhor de generalizar do que usando o Objects: utilizando generics. 
+
+**Como usar ArrayList**
+
+```java
+import java.util.ArrayList;
+//...
+ArrayList<String> vetor = new ArrayList<String>(5);
+//Existe mais de um construtor
+//Essa classe eh muito importante
+//Uma das classes mais usadas em projetos
+```
+
+Dar uma olhada em [DevMedia]([Arraylist Java: Explorando a classe ArrayList no Java - DevMedia](https://www.devmedia.com.br/explorando-a-classe-arraylist-no-java/24298))
+
+E também em [ArrayList Source Code]([Source for java.util.ArrayList (GNU Classpath 0.95 Documentation)](https://developer.classpath.org/doc/java/util/ArrayList-source.html))
+
+**Pilhas Estáticas**
+
+Comportamento LIFO - Last in First Out
+
+Pensar em pilha de pratos.
+
+Métodos:
+
+- Empilhar (push): adicionar elementos no topo;
+
+- Desempilhar (pop): remover do topo;
+
+- Verificar a quantidade de elementos na pilha;
+
+- Verificar se a pilha está vazia;
+
+- Verificar elemento no topo.
+
+**API JAVA STACK**
+
+Classe nativa do Java que organiza dados como uma pilha.
+
+Algumas formas de uso abaixo:
+
+```java
+Stack<Integer> pilha = new Stack<Integer>();
+
+Sysytem.out.println(stack.isEmpty());
+
+stack.push(item);
+
+System.out.println(stack.size());
+
+System.out.println(stack.peek());
+
+stack.pop();
+
+
+```

@@ -265,8 +265,32 @@ System.out.println(stack.size());
 System.out.println(stack.peek());
 
 stack.pop();
-
-
 ```
+
+Existe uma outra API interessante também no Java para Filas, a Queue. Nesse caso, trata-se de uma interface, e não de uma classe, então existem algumas particularidades na utilização. Mas não vou detalhar isso aqui.
+
+**Filas com prioridade**
+
+A ideia de uma fila com prioridade é inserir o elemento na fila já na posição correta do vetor.
+
+Seria algo parecido com isso:
+
+```java
+//supondo que T seja um numero
+public void enfileira(T elemento){
+    for(int i=0;i<this.tamanhoReal;i++){
+        if(elemento<this.elementos.[i]){
+            this.adiciona(i,elemento);
+            break;
+        }
+    }    
+}
+```
+
+Nesse caso, se eu tentar adicionar {1,3,2}, esses elementos entrariam na fila como {1,2,3}.
+
+O código acima vai dar erro de compilação porque o elemento é um genérico, e não um número. 
+
+Para ajudar, existe uma interface no Java chamada <u>Comparable</u>. Mas não vou detalhar isso aqui. Também existe no java a API PriorityQueue.
 
 

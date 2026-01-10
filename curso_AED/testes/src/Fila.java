@@ -55,4 +55,8 @@ public class Fila<T> {
         }
     }
 
+    public T peek(){
+        return this.elementos[0];
+    }
+
 }

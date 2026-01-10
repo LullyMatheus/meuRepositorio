@@ -12,10 +12,14 @@ public class App {
 
         System.out.println(fila.toString());
 
+        System.out.println("O primeiro elemento é: "+fila.peek());
+
         fila.desenfileirar();
         fila.desenfileirar();
 
         System.out.println(fila.toString());
+
+        System.out.println("O primeiro elemento é: "+fila.peek());
 
     }
 }

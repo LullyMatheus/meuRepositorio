@@ -7,4 +7,11 @@ public class ListaEncadeada<T> {
         No<T> celula = new No<T>(elemento);
         this.inicio=celula;
     }
+
+    @Override
+    public String toString() {
+        return "ListaEncadeada [inicio=" + inicio + "]";
+    }
+
+    
 }

@@ -3,12 +3,12 @@ public class App {
 
         // Pilha<Integer> pilha = new Pilha<Integer>(3);
 
-        Fila<Integer> fila = new Fila<Integer>(10);
+        Fila<String> fila = new Fila<String>(3);
 
-        fila.enfileirar(9);
-        fila.enfileirar(8);
-        fila.enfileirar(7);
-        fila.enfileirar(6);
+        fila.enfileirar("Primeiro a chegar");
+        fila.enfileirar("Segundo a chegar");
+        fila.enfileirar("Terceiro a chegar");
+        fila.enfileirar("Quarto a chegar");
 
         System.out.println(fila.toString());
 

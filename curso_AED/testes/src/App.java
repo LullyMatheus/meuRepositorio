@@ -1,25 +1,17 @@
+import lista_encadeada.ListaEncadeada;
+
 public class App {
     public static void main(String[] args) throws Exception {
 
-        // Pilha<Integer> pilha = new Pilha<Integer>(3);
+        ListaEncadeada<Integer> lista = new ListaEncadeada<Integer>();
 
-        Fila<String> fila = new Fila<String>(3);
+        lista.adiciona(1);
+        lista.adiciona(9);
+        lista.adiciona(17);
 
-        fila.enfileirar("Primeiro a chegar");
-        fila.enfileirar("Segundo a chegar");
-        fila.enfileirar("Terceiro a chegar");
-        fila.enfileirar("Quarto a chegar");
+        System.out.println(lista.toString());
 
-        System.out.println(fila.toString());
-
-        System.out.println("O primeiro elemento é: "+fila.peek());
-
-        fila.desenfileirar();
-        fila.desenfileirar();
-
-        System.out.println(fila.toString());
-
-        System.out.println("O primeiro elemento é: "+fila.peek());
+        
 
     }
 }

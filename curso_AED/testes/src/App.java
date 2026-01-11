@@ -8,12 +8,25 @@ public class App {
         lista.adiciona(1);
         lista.adiciona(9);
         lista.adiciona(17);
+        lista.adiciona(45);
+        lista.adiciona(92);
+        lista.adiciona(69);
 
-        //lista.percorrerLista();
+        System.out.println("Lista completa:");
+        System.out.println(lista.toString());
+        System.out.println("--------------");
 
+        lista.remover(1);
+        System.out.println("Remove posição 1: ");
         System.out.println(lista.toString());
 
-        
+        lista.remover(3);
+        System.out.println("Remove posição 3: ");
+        System.out.println(lista.toString());
+
+        lista.remover(2);
+        System.out.println("Remove posição 2: ");
+        System.out.println(lista.toString());
 
     }
 }

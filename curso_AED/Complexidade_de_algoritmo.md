@@ -51,5 +51,3 @@ Existem valores m e c tais que, a partir de um valor m para N, existe c*g(N) que
 $0<=c1*g(N)<=f(N)<=c2g(N)$
 
 Existe c1 *  g(N) que é sempre menor que f(N) e existe também c2 * g(N) que é sempre maior que f(N).
-
-

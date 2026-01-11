@@ -9,6 +9,8 @@ public class App {
         lista.adiciona(9);
         lista.adiciona(17);
 
+        //lista.percorrerLista();
+
         System.out.println(lista.toString());
 
         

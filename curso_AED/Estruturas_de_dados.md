@@ -292,5 +292,3 @@ Nesse caso, se eu tentar adicionar {1,3,2}, esses elementos entrariam na fila co
 O código acima vai dar erro de compilação porque o elemento é um genérico, e não um número. 
 
 Para ajudar, existe uma interface no Java chamada <u>Comparable</u>. Mas não vou detalhar isso aqui. Também existe no java a API PriorityQueue.
-
-

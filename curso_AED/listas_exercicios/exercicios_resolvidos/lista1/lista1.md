@@ -30,7 +30,13 @@ Indique se as afirmativas abaixo são verdadeiras ou falsas e justifique a sua r
 
 a) 2^2n = O(3^n)
 
-Para isso ser verdade, deve existir uma constante c tal que c*(3^n) é sempre maior que 2^(2n). Se utilizarmos 
+✅Para isso ser verdade, deve existir uma constante c tal que c*(3^n) é sempre maior que 2^(2n). Porém, tal constante não existe. Pode-se concluir isso porque a taxa de crescimento de 2^(2n) é muito maior do que 3^n. Então, por meio de uma análise assintótica (quando o n tende a valores grandes) não há constante que faça 3^n ser sempre maior.
+
+PROVA MATEMÁTICA: 2^(2n)=(2^2)^n=4^n
+
+E 4^n é sempre maior que 3^n
+
+
 
 b) 2^(n+1) = O(3^n)
 

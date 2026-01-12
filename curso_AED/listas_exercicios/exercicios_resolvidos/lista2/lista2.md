@@ -18,8 +18,6 @@ Para os exercícios 27 a 32 implemente o tipo abstrato de dados lista com as seg
 
 - Localizar/Pesquisar um elemento (search)
 
-
-
 ⭐**EXERCÍCIO 27**
 
 Implemente uma lista estática (array).
@@ -29,8 +27,6 @@ Implemente uma lista estática (array).
 Endereço:
 
 curso_AED\listas_exercicios\exercicios_resolvidos\lista2\src\exercicio27
-
-
 
 ⭐**EXERCÍCIO 28**
 
@@ -61,8 +57,6 @@ A diferença fundamental está na relação entre a **Posição Física** (onde 
 - **Visual:** `[C, A, _, B, _]` (Onde A aponta pra B, B aponta pra C).
 
 O código com a solução desse exercício está na pasta de exercícios resolvidos.
-
-
 
 ⭐**EXERCÍCIO 29**
 
@@ -130,8 +124,6 @@ implementar:
 - método para concatenar (Merge)
 
 - método para ordenar os itens da lista em ordem ascendente.
-  
-  
 
 **EXERCÍCIO 31**
 
@@ -142,14 +134,10 @@ Implemente uma lista duplamente encadeada com sentinelas. Além das operações 
 - método para dividir uma lista em várias
 
 - método para ordenar os itens da lista em ordem ascendente.
-  
-  
 
 **EXERCÍCIO 32**
 
 Implemente uma lista circular duplamente encadeada
-
-
 
 **EXERCÍCIO 33**
 
@@ -157,11 +145,7 @@ Considerando listas simplesmente encadeadas (exercício 29), implemente:
 
 a) um método ao receber uma lista por parâmetro, retorne uma lista que é a união sem repetição das duas outras listas.
 
-
-
 b) um método ao receber uma lista por parâmetro, retorne uma lista que é a interseção das duas outras listas.
-
-
 
 **EXERCÍCIO 34**
 
@@ -171,19 +155,13 @@ $P(x)=a0+a1x+a2 x²+...+an(x^n)$ .
 
 Tais polinômios podem ser representados por listas duplamente encadeadas onde cada elemento da lista possui dois campos: um para o coeficiente que é um número real, um para o expoente que é um número inteiro. Implemente uma classe que represente um polinômio e que tenha métodos para somar dois polinômios e derivar um polinômio.
 
-
-
 **EXERCÍCIO 35**
 
 Construa um procedimento para inverter a ordem de uma lista simplesmente encadeada utilizando apenas duas variáveis auxiliares (não é permitido o uso de listas auxiliares). É possível construir o procedimento utilizando apenas uma variável auxiliar? Se sim, como?
 
-
-
 **EXERCÍCIO 36**
 
 Mostre como implementar uma pilha utilizando-se de duas filas.
-
-
 
 **EXERCÍCIO 37**
 
@@ -205,7 +183,7 @@ Faça um programa que cadastre em uma pilha vários números. A entrada deles se
             } else {
                 filaImpar.enfileirar(pilha.busca(i));
             }
-            
+
         }
 
         System.out.println("Pilha: "+pilha.toString());
@@ -216,8 +194,6 @@ Faça um programa que cadastre em uma pilha vários números. A entrada deles se
 
     }
 ```
-
-
 
 **EXERCÍCIO 38**
 
@@ -233,8 +209,6 @@ d) Eject() Remove o elemento que está no final da deque.
 
 A fim de implementar as operações acima em tempo constante, qual a melhor opção: lista sequencial, lista simplesmente encadeada ou lista duplamente encadeada? A partir de sua decisão, crie uma classe que represente a estrutura de dados e as operações acima.
 
-
-
 **EXERCÍCIO 39**
 
 Duas pilhas podem ser implementadas em um único array A da seguinte forma: A primeira pilha cresce a partir do início do array para direita e a segunda cresce a partir do final do array para a esquerda, ou seja, as pilhas crescem uma em direção a outra. Escreva os seguintes procedimentos:
@@ -243,34 +217,22 @@ a) Push(A,i), onde A é o novo elemento a ser inserido na pilha i = 1,2.
 
 b) Pop(i) que retorna o elemento que está no topo da pilha i = 1,2.
 
-
-
 **EXERCÍCIO 40**
 
 Utilizando a implementação de listas através de arranjos (Lista sequencial), implemente um procedimento para inserir um item em uma determinada posição da lista.
-
-
 
 **EXERCÍCIO 41**
 
 Implemente um procedimento RemovePar que, dada uma lista autorreferenciadas remove todos elementos cuja chave é par.
 
-
-
 **EXERCÍCIO 42**
 
 Implemente um procedimento FuraFila que, dada uma fila implementada com apontadores insere um elemento na primeira posição da fila.
-
-
 
 **EXERCÍCIO 43**
 
 Utilizando as operações de manipulação de pilhas vistas em sala, uma pilha auxiliar e uma variável do tipo TipoItem, escreva um procedimento que remove um item com chave c de uma posição qualquer de uma pilha. Note que você não tem acesso à estrutura interna da pilha (topo, item, etc), apenas às operações de manipulação.
 
-
-
 **EXERCÍCIO 44**
 
 Agora escreva uma função para trocar os elementos m e n de uma lista duplamente encadeada (m e n podem ser chaves ou mesmo ponteiros para os elementos).
-
-

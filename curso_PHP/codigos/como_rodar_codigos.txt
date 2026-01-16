@@ -1,0 +1,3 @@
+Abrir c:\wamp64\www\
+Criar os projetos nessa pasta www
+Abrir projetos ligando o wamp, abrindo o localhost e clicando no nome do projeto.

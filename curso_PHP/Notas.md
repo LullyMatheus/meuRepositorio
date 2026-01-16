@@ -18,4 +18,12 @@ Foi com a contribuição da comunidade que o PHP passou a ser uma linguagem de p
 
 **PHP**: PHP Hypertext Preprocessor
 
+## Como funciona o PHP?
 
+O PHP trás novas funcionalidades ao HTML. Essa linguagem completa o conjunto HTML, CSS e JS, trazendo funcionalidades adicionais.
+
+PHP são programas dentro do HTML. Eles são interpretados por uma máquina chamada Apache.
+
+PHP é uma tecnologia Server Side (do lado do servidor).
+
+Programas a serem utilizados: EasyPHP ou Wamp Server.

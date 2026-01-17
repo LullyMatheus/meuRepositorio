@@ -42,9 +42,9 @@ Programas a serem utilizados: EasyPHP ou Wamp Server.
     <?php 
 
     echo "<strong>Olá <br> Mundo!<strong>";    
-    
+
     ?>
-    
+
 </body>
 </html>
 ```
@@ -118,3 +118,96 @@ echo "$nome tem $idade anos!";
 ```
 
 Atenção: as aspas precisam ser duplas para que o php faça a interpretação de variáveis.
+
+### Operações em PHP
+
+```php
+$n1 = 2;
+$n2 = 3;
+$s = $n1 + $n2;
+echo "A soma vale $s";
+```
+
+Operadores suportados pelo PHP:
+
+- Adição `$r = $n1 + $n2`;
+
+- Subtração `$r = $n1 - $n2`;
+
+- Multiplicação `$r = $n1 * $n2`;
+
+- Divisão `$r = $n1 / $n2`;
+
+- Módulo `$r = $n1 % $n2`.
+
+```php
+$n1=3;
+$n2=2;
+echo "A soma vale ". ($n1+$n2);
+```
+
+### Como utilizar valores fornecidos pelo usuário?
+
+Primeiro passo: analisar sua URL.
+
+Por exemplo: 
+
+`http://localhost/aula05/operadores.php`
+
+Você pode passar valores personalizados diretamente pela URL. Por exemplo:
+
+`http://localhost/aula05/operadores.php?a=3&b=2`
+
+Repare no final "?a=3&b=2"
+
+Estamos atribuindo o valor 3 à variável a, e o valor 2 à variável b.
+
+Segundo passo: pegar esses valores no código.
+
+```php
+$n1 = $_GET["a"];
+$n2 = $_GET["b"];
+```
+
+A variável $n1 está pegando o valor de a;
+
+A variável $n2 está pegando o valor de b;
+
+```php
+$c=1;
+$c=$c+1;
+$c+=1;
+$c++;
+```
+
+### Como fazer comentários?
+
+```php
+//comentário inline
+#comentário inline
+
+/*
+Comentário de várias linhas
+*/
+```
+
+### Variáveis de Referência
+
+```php
+$a = 3;
+$b = &$a; 
+#aqui, b eh uma referencia de a
+#ou seja, se eu mudar b, a muda tbm
+```
+
+### Variáveis de Variáveis
+
+```php
+$nome = "matheus";
+$$nome = "mechetti";
+/*
+essa segunda linha cria uma variavel cujo
+nome sera o conteudo da primeira variavel
+Teremos $matheus = "mechetti";
+*/
+```

@@ -211,3 +211,26 @@ nome sera o conteudo da primeira variavel
 Teremos $matheus = "mechetti";
 */
 ```
+
+### Operador Unário
+
+Usar a seguinte sintaxe:
+
+`expressao ? verdadeiro : falso;`
+
+Exemplo:
+
+```php
+$maior = $a > $b ? $a : $b;
+$situacao = $nota >= 60 ? "aprovado" : "reprovado";
+```
+
+### Operadores Lógicos
+
+`AND`: and ou &&
+
+`OR`: or ou ||
+
+`XOR`: xor
+
+`NOT`: !

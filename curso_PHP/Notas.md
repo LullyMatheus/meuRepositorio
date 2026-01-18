@@ -234,3 +234,89 @@ $situacao = $nota >= 60 ? "aprovado" : "reprovado";
 `XOR`: xor
 
 `NOT`: !
+
+## Integração PHP e HTML
+
+Vamos revisar um pouco de forms em HTML.
+
+Formulários em HTML começam com a tag `<form>` e terminam com `</form>`.
+
+Dentro da tag `<form>` podemos inserir mais algumas informações importantes, como `method` e `action`.
+
+`<form method="get" action="dados.php">`
+
+O method poderia ser get ou post. O get envia os dados pela URL e o post envia por pacotes.
+
+O get é um pouco mais rápido e menos seguro. O método post é um pouco mais lento e mais seguro.
+
+Da forma como a linha acima foi escrita, o form irá enviar os dados para o arquivo dados.php.
+
+```html
+<form method="get" action="dados.php">
+    <input type="text" name="v"/>
+    <input type="submit" value="Calcular"/>
+</form>
+```
+
+O submit do html vai enviar os dados para o endereço definido em action. 
+
+```php
+<?php
+/*
+Aqui vai o codigo php que recebce
+as informacoes do html acima
+*/
+$valor= $_GET["v"];
+//aqui voce pode fazer o que quiser
+//com esse valor
+$valor= $_POST["v"];
+?>
+```
+
+O seguinte código evita erros nos casos em que você não informou valores pela URL:
+
+```php
+<?php
+    $nome= isset($_GET["nome"])?$_GET["nome"]:"[não definido]";
+    //isset significa "esta definido" ou algo assim
+?>
+```
+
+### Como usar PHP para alterar o CSS?
+
+Uma forma de fazer isso é colocando os comandos GET do PHP no head do arquivo, antes da tag style.
+
+```php
+<head>
+    <?php
+    $tam = isset($_GET["tam"])?$_GET["tam"]:12px;
+    ?>
+    <style>
+        span.texto{
+            font.size: <?php echo $tam: ?>;
+        }
+    </style>
+</head>
+```
+
+### Condicionais em PHP
+
+```php
+if($a > $b) {
+    $maior = $a;
+}
+else {
+    $maior = $b;
+}
+
+if($idade>=18){
+    $vota=true;
+    $dirige=true;
+}
+else{
+    $vota=false;
+    $dirige=false;
+}
+```
+
+No PHP, também existe a estrutura `elseif`, para facilitar a criação de uma estrutura condicional dentro da outra.

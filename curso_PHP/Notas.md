@@ -320,3 +320,71 @@ else{
 ```
 
 No PHP, também existe a estrutura `elseif`, para facilitar a criação de uma estrutura condicional dentro da outra.
+
+### Switch Case
+
+```php
+switch ($op) {
+    case 1:
+        echo "A";
+        break;
+    case 2:
+        echo "B";
+        break;
+    default:
+        echo "erro";
+}
+```
+
+Sobre o uso do tipo "radio" no input HTML: cada opção deve ter o mesmo nome, mas values diferentes.
+
+```php
+<?php 
+
+    $n = isset($_GET["num"])?$_GET["num"]:0;
+    $o = isset($_GET["oper"])?$_GET["oper"]:1;
+
+    switch ($o) {
+        case 1:
+            $r = $n * 2;
+            break;
+        case 2:
+            $r = $n ^ 3;
+            break;
+        case 3:
+            $r = sqrt($n);
+            break;
+        default:
+            echo "ERRO";
+    }
+
+?>
+```
+
+Outra forma de utilizar o switch:
+
+```php
+switch ($op){
+    case 1:
+    case 2:
+    case 3:
+        echo "Tipo 1";
+        break;
+    case 4:
+    case 5:
+        echo "Tipo 2";
+        break;
+    default:
+        echo "Tiop 3";
+}
+```
+
+### Estrutura de Repetição While
+
+```php
+$c=1;
+while($c<=10){
+    echo $c;
+    $c++;
+}
+```

@@ -388,3 +388,62 @@ while($c<=10){
     $c++;
 }
 ```
+
+### Estrutura do While
+
+```php
+$c=1;
+do{
+    echo $c;
+    $c++;
+} while ($c<=10);
+```
+
+### Estrutura "Para" (For)
+
+```php
+for($c=1;$c<=10;$c++){
+    echo $c;
+}
+```
+
+Dica de javascript:
+
+Como criar um botão de voltar de um jeito diferente. Ao invés de usar href e colocar o link da página principal, você pode:
+
+```html
+<a href="javascript:history.go(-1)">Voltar</a>
+```
+
+### Rotinas em PHP (Procedimentos e Funções)
+
+Os dois são functions no PHP. Alguns retornam valores, outros não.
+
+```php
+function soma($a, $b){
+    $s = $a + $b;
+    echo "Soma: $s";
+}
+//chamada
+soma(2,2);
+
+function soma($a, $b){
+    return $a + $b;
+}
+
+$r=soma(2,2);
+echo "Soma: $r"
+
+//parametros variaveis
+function soma(){
+    $p = func_get_args();
+    $tot = func_num_args();
+    $s = 0;
+    for($i=0;$i<$tot:$i++){
+        $s+=$p[$i];
+    }
+    return $s;
+}
+//chamada
+soma(3,5,2);
+```

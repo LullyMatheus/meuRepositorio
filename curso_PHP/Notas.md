@@ -447,3 +447,99 @@ function soma(){
 //chamada
 soma(3,5,2);
 ```
+
+Observação importante sobre algoritmos
+
+```php
+function teste(&$x){
+    $x=$x+2;
+    echo $x;
+}
+
+$a=3;
+teste($a);
+echo $a;
+
+$a=3;
+teste($a);
+echo $a;
+```
+
+No algoritmo acima, a função teste não irá alterar o valor da variável $a. Assim, o valor exibido no final ainda será 3.
+
+Quando eu passo uma variável como parâmetro da função, eu estou passando apenas o valor dela. Se eu quiser passar para a função a referência da variável, eu devo passar a variável com o sinal "&" na frente (na definição da função).
+
+### Como utilizar rotinas externas?
+
+```php
+<?php
+/*
+imagine que ha um arquivo funcoes.php onde
+as minhas funcoes estao definidas
+*/
+include "funcoes.php"; //import
+?>
+```
+
+Também existe o método "require", para importar. A diferença é basicamente que se o include der erro, o resto do código continua sendo executado. No require, se der erro, ele vai parar tudo.
+
+Além disso, existe o require_once e o include_once. Servem para que a função não carregue novamente caso já tenha sido carregada.
+
+### Funções String em PHP
+
+- printf( ); //printar formatado
+  
+  - %d, %u, %f;
+
+- printr( ); //printar vetor
+
+- wordwrap( );
+
+```php
+$t="Exemplo qualquer de texto grande que seria exibido na minha página";
+$r=wordwrap($t,20,"</br>\n")
+```
+
+Esse código quebra o texto a cada 20 caracteres e insere na quebra "</br>\n".
+
+- strlen( ); //calcula o tamanho da string
+
+- trim( ); Remover Espaços do início e do final
+
+- str_word_count( ); 
+  
+  - Essa função conta o número de palavras, ou gera um vetor com cada palavra da string, sendo que esse vetor também pode manter a posição de cada letra da string;
+  
+  - `str_word_count($txt, 0 );`
+  
+  - `str_word_count($txt, 1 );`
+  
+  - `str_word_count($txt, 2 );`
+
+- explode( ); 
+  
+  - Quebra uma string e coloca os itens em um vetor. Você pode escolher qual o caractere será usado como divisor;
+  
+  - `$vetor = explode(" ", $txt);`
+
+- str_split( );
+  
+  - Coloca cada letra de uma string em uma posição de um vetor.
+
+- implode( );
+  
+  - Transforma um vetor inteiro em uma string. Pode adicionar algum caractere entre os elementos unidos.
+  
+  - `$txt = implode(" ", $vetor);`
+  
+  - Existe outra função de nome join que faz a mesma coisa.
+
+- chr( );
+  
+  - Retorna um caractere de acordo com seu código ASCII passado como parâmetro;
+  
+  - `$letra = chr(67);`
+
+- ord( );
+  
+  - Retorna o código ASCII de um caractere passado como parâmetro.

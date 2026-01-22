@@ -543,3 +543,186 @@ Esse código quebra o texto a cada 20 caracteres e insere na quebra "</br>\n".
 - ord( );
   
   - Retorna o código ASCII de um caractere passado como parâmetro.
+
+- strtolower( );
+  
+  - Deixa a string com letras minusculas;
+
+- strtoupper( );
+  
+  - Deixa a string com letras maiúsculas;
+
+- ucfirst( );
+  
+  - Upper Case First. Deixa a primeira letra da string maiúscula;
+
+- ucwords( );
+  
+  - Upper Case Words. Deixa cada palavra com a primeira letra maiúscula;
+
+- strrev( );
+  
+  - string reverse. Deixa a string ao contrário;
+
+- strpos( );
+  
+  - procura a posição de uma string dentro de outra string;
+
+- stripos( );
+  
+  - Semelhante à função acima, mas o "i" significa "ignore case";
+
+- substr_count( );
+  
+  - Conta quantas vezes uma string aparece dentro da outra;
+
+- substr( );
+  
+  - Recorta um pedaço da string;
+
+- str_pad($nome, 30, " ", STR_PAD_RIGHT);
+  
+  - Essa função faz sua string encaixar em 30 caracteres
+  
+  - Pode-se usar também STR_PAD_CENTER e STR_PAD_RIGHT
+
+- str_repet($txt, 5);
+  
+  - Repetir string 5 vezes;
+
+- str_replace( );
+  
+  - substituir uma palavra dentro da string por outra;
+
+
+
+### Vetores e Matrizes
+
+No PHP, não tem declaração de array
+
+```php
+$n[0]=5;
+$n[1]=3;
+$n[2]=8;
+$n[3]=2;
+//ou entao
+$n=array(5,3,8,2);
+$n[]=7; //sera adicionado no final
+```
+
+No PHP, os vetores são dinâmicos. Ou seja, o tamanho varia.
+
+```php
+$c=range(5,20,5);
+//vetor comeca em 5 termina em 20 com passo 5
+foreach($c as $v){
+    echo "$v "; //printar de um jeito mais bonito
+}
+$v=array(1=>"A", 3=>"B", 6=>"C");
+//cria o vetor A B C nas posicoes 1,3 e 6
+
+unset($v[9]); // remove indice 9
+```
+
+### Chaves Associativas
+
+```php
+$cad = array("nome"=>"Ana", "idade"=>23);
+//Substitui os indices pelas strings
+echo $cad[nome];
+foreach($cad as $campo => $valor){
+    echo "O valor de $campo é $valor";
+}
+```
+
+### Matrizes
+
+Tecnicamente não existem matrizes em PHP. Mas existem estruturas de vetores dentro de vetores;
+
+```php
+$n=array(array(2,3), array(3,4), array(9,5));
+$n[2][0]=$n[1][1];
+//cada vetor e uma linha, cada posicao e uma coluna
+```
+
+```php
+$n=array(3,5,8,2);
+foreach($n as $valor){
+    echo "$valor ";
+}
+```
+
+- printr( $vetor);
+  
+  - Maneira simples de exibir o vetor para o programador;
+
+DICA: Coloque a tag <?php ?> entre as tags html:
+
+`<pre> </pre>` 
+
+Isso melhora a visualização.
+
+- var_dump($vetor);
+  
+  - Um pouco mais completo que o printr;
+
+- count($vetor);
+  
+  - Conta o numero de elementos no vetor;
+
+### Estruturas de dados
+
+Como adicionar elementos no início e no final?
+
+Adicionar no final:
+
+```php
+$vetor[] = 0;
+//adiciona 0 no final
+array_push($vetor, 7);
+//adiciona 7 no final
+```
+
+Adicionar no início:
+
+```php
+array_unshift($vetor, 7);
+//Adiciona 7 no início
+```
+
+Remover do final
+
+```php
+array_pop($vetor);
+//remove ultimo elemento
+```
+
+Remover do início
+
+```php
+array_shift($vetor);
+//remove do inicio
+```
+
+### Métodos de Ordenação
+
+```php
+//ordem crescente
+sort($vetor);
+
+//ordem reversa
+rsort($vetor);
+
+//ordem associativa
+//ordenar os valores mudando os indices
+asort($vetor);
+
+//ordem associativa reversa
+arsort($vetor);
+
+//ordenacao por chaves
+ksort($vetor);
+
+//ordenacao reversa por chaves
+krsort($vetor);
+```

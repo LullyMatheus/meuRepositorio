@@ -42,4 +42,6 @@ Para lembrar: COMERNada :)
 
 ## Instalação de Recursos
 
-Irei utilizar o WAMP + VSCode
+Irei utilizar o WAMP + VSCode (E netbeans, às vezes)
+
+
